@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## OMDb API - Free Movies Database
+
+OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=36f4c3cb \
+Append apiKey to all API request\
+You can find css and other supported files for the tutorial here: https://gist.github.com/adrianhajdin
+
 ## Available Scripts
 
 In the project directory, you can run:
