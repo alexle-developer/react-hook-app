@@ -1,7 +1,5 @@
-import React from 'react';
-
 // using object destructuring instead of props
-// so we will not have to type props.movie1.x
+// so we will not have to type props.moviee.x
 // Object Destructuring: {object}
 const MovieCard = ({ movie }: any) => {
 	return (

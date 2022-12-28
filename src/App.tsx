@@ -9,17 +9,11 @@ import './App.css';
 
 const API_BASE_URL = 'http://www.omdbapi.com?apikey=36f4c3cb';
 
-const movie1 = {
-	'Title': 'Spiderman unlimited the movie',
-	'Year': '2023',
-	'imdbID': 'tt18969216',
-	'Type': 'movie',
-	'Poster': 'N/A',
-};
-
 const App = () => {
 	// default to an empty array
 	const [movies, setMovies] = useState([]);
+	// default to empty string
+	const [searchTerm, setSearchTerm] = useState('');
 
 	const searchMovies = async (title: string) => {
 		const response = await fetch(`${API_BASE_URL}&s=${title}`);
@@ -31,17 +25,25 @@ const App = () => {
 		setMovies(data.Search);
 	};
 
+	// useEffect run on each update
+	// adding the dependency array [searchTerm]
+	// to only re-run the effect is searchTerm changes
 	useEffect(() => {
-		searchMovies('Spiderman');
-	}, []);
+		searchMovies(searchTerm);
+	}, [searchTerm]);
 
 	return (
 		<>
 			<div className='app'>
 				<h1>MovieLand</h1>
 				<div className='search'>
-					<input type='text' placeholder='Search for movies' value='Superman' onChange={() => {}} />
-					<img src={SearchIcon} alt='search' onClick={() => {}} />
+					<input
+						type='text'
+						placeholder='Search for movies'
+						value={searchTerm}
+						onChange={e => setSearchTerm(e.target.value)}
+					/>
+					<img src={SearchIcon} alt='search' onClick={() => searchMovies(searchTerm)} />
 				</div>
 				{movies?.length > 0 ? (
 					<div className='container'>
