@@ -3,9 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## OMDb API - Free Movies Database [http://www.omdbapi.com/](http://www.omdbapi.com/)
+The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by the provider.
+
 
 ### The "react-hook-app" is an interactive single-page application (SPA) for learning modern React with Hooks.
-### "react-hook-app" is a free movies database that allows users to search for their favorite movies.
+### It is a free movies database that allows users to search for their favorite movies.
 
 <br/>
 
