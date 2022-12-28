@@ -8,6 +8,8 @@ OMDb API: http://www.omdbapi.com/?i=tt3896198&apikey=36f4c3cb \
 Append apiKey to all API request\
 You can find css and other supported files for the tutorial here: https://gist.github.com/adrianhajdin
 
+<br/>
+
 ## Available Scripts
 
 In the project directory, you can run:
